@@ -8,8 +8,9 @@
     <div class="m-container">
       
       <div class="cards">
-        @foreach ($fumetti as $fumetto)
-            <h2>{{$fumetto['title']}}</h2>
+        @foreach ($fumetti as $key => $fumetto)
+            
+          <a href="{{ route('dettaglio-fumetto', ['id' => $key])}} "><h2>{{$fumetto['title']}}</h2></a>
 
         @endforeach
         <button>load more</button>

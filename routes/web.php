@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','HomeController@home')->name('homepage');
+
+Route::get('/comics-page', 'ComixController@comics')->name('comics-route');
+
+
+Route::get('/detail/{id}', 'ComixController@detail')->name('dettaglio-fumetto');
