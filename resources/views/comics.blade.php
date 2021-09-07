@@ -11,6 +11,7 @@
         @foreach ($fumetti as $key => $fumetto)
             
           <a href="{{ route('dettaglio-fumetto', ['id' => $key])}} "><h2>{{$fumetto['title']}}</h2></a>
+          
 
         @endforeach
         <button>load more</button>
